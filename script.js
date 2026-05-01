@@ -40,4 +40,10 @@ if (gender.value === "male") {
 }
 
 document.getElementById("result").textContent = `Your Akan name is: ${akanName}`;
+
+
+//Clear form after submission 
+
+document.getElementById("akanForm").reset();
+
 });
