@@ -22,3 +22,8 @@ if (!gender) {
     alert("Don't forget to select a gender🤨.");
     return;
 }
+
+//obtaining CC and YY
+const CC = Math.floor(year / 100);
+const YY = year % 100;
+
