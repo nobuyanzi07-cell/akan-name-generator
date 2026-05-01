@@ -1,6 +1,5 @@
-document.getElementById("AkanForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-    const day = parseInt(document.getElementById("day").value);
+document.getElementById("akanForm").addEventListener("submit", function(e) { e. preventDefault();
+     const day = parseInt(document.getElementById("day").value);
     const month = parseInt(document.getElementById("month").value);
     const year = parseInt(document.getElementById("year").value);
     const gender = document.querySelector('input[name="gender"]:checked').value;
@@ -27,3 +26,18 @@ if (!gender) {
 const CC = Math.floor(year / 100);
 const YY = year % 100;
 
+// Day of the week Callculations w zeller formula
+const d = Math.floor(((CC/4) - (2*CC) - 1) + ((5*YY)/4) + ((26*(month+1))/10) + day) % 7;
+
+const akanMaleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+const akanFemaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
+let akanName;
+if (gender.value === "male") {
+    akanName = akanMaleNames[d];
+} else {
+    akanName = akanFemaleNames[d];
+}
+
+document.getElementById("result").textContent = `Your Akan name is: ${akanName}`;
+});
