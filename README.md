@@ -15,6 +15,8 @@ Nathan Oketch
 1. Open ubuntu
 2. git clone the repo: git clone git@github.com:nobuyanzi07-cell/akan-name-generator.git
 3. code . 
+# Bdd
+
 # Technologies used
 1. Javascript
 2. CSS
