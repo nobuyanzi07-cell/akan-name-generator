@@ -22,6 +22,7 @@ if (!gender) {
     return;
 }
 
+
 //obtaining CC and YY
 const CC = Math.floor(year / 100);
 const YY = year % 100;
@@ -33,11 +34,12 @@ const akanMaleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kw
 const akanFemaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 let akanName;
-if (gender.value === "male") {
+if (gender === "male") {
     akanName = akanMaleNames[d];
 } else {
     akanName = akanFemaleNames[d];
 }
+
 
 document.getElementById("result").textContent = `Your Akan name is: ${akanName}`;
 
